@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FORMA — Fashion Store</title>
+
+    <meta name="description" content="FORMA — современный интернет-магазин одежды">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Верхняя полоска -->
+    <div class="announcement">
+        НОВАЯ КОЛЛЕКЦИЯ УЖЕ ЗДЕСЬ
+        <span>✳</span>
+        ДОСТАВКА ОТ 30 000 ₸ БЕСПЛАТНО
+    </div>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header-inner">
+
+            <button type="button" class="icon-btn menu-toggle"
+                id="menuToggle" aria-label="Открыть меню"
+                aria-controls="mainNav" aria-expanded="false">
+                ☰
+            </button>
+
+            <a href="#" class="logo">
+                FOR<span>MA</span><i>.</i>
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="#catalog" data-nav="all">Новинки</a>
+                <a href="#catalog" data-nav="Женская">Женское</a>
+                <a href="#catalog" data-nav="Мужская">Мужское</a>
+                <a href="#story">О бренде</a>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" class="icon-btn"
+                    id="searchToggle" aria-label="Открыть поиск"
+                    aria-controls="searchPanel">
+                    ⌕
+                </button>
+
+                <button type="button" class="icon-btn"
+                    id="showFavorites" aria-label="Показать избранное">
+                    ♡
+                </button>
+
+                <button type="button" class="bag-btn"
+                    id="openCart" aria-label="Открыть корзину">
+                    СУМКА
+                    <span id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Поиск -->
+        <div class="search-panel" id="searchPanel">
+            <input type="search" id="searchInput"
+                placeholder="Найти свою вещь...">
+            <button type="button" id="closeSearch"
+                aria-label="Закрыть поиск">×</button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Главный баннер -->
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow light">
+                    КОЛЛЕКЦИЯ ОСЕНЬ / ЗИМА 2026
+                </p>
+
+                <h1>
+                    Стиль — это
+                    <br>
+                    <em>твоё состояние.</em>
+                </h1>
+
+                <p class="hero-description">
+                    Одежда, в которой комфортно быть собой.
+                    Чистые силуэты, приятные фактуры
+                    и внимание к деталям.
+                </p>
+
+                <a href="#catalog" class="light-link">
+                    СМОТРЕТЬ КОЛЛЕКЦИЮ
+                    <span>↗</span>
+                </a>
+
+                <div class="hero-index">01 / 03</div>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1400&q=85"
+                    alt="Fashion коллекция"
+                >
+
+                <div class="hero-sticker">
+                    NEW
+                    <br>
+                    SEASON
+                    <br>
+                    <b>✳</b>
+                </div>
+            </div>
+        </section>
+
+        <!-- Бегущая строка -->
+        <section class="ticker">
+            <div>
+                WEAR YOUR MOOD ✳
+                FIND YOUR FORM ✳
+                EVERYDAY IS YOUR RUNWAY ✳
+                WEAR YOUR MOOD ✳
+                FIND YOUR FORM ✳
+            </div>
+        </section>
+
+        <!-- Категории -->
+        <section class="categories section-wrap">
+            <div class="section-top">
+                <div>
+                    <p class="eyebrow">НАЙДИ СВОЙ СТИЛЬ</p>
+                    <h2>Выбирай <em>настроение</em></h2>
+                </div>
+
+                <p class="side-note">
+                    Коллекции, которые легко
+                    <br>
+                    сочетаются между собой.
+                </p>
+            </div>
+
+            <div class="category-grid">
+                <a href="#catalog" class="category-tile"
+                    data-category="Женская">
+                    <img
+                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
+                        alt="Женская одежда">
+                    <span>01 / ЖЕНСКОЕ</span>
+                    <b>Для неё ↗</b>
+                </a>
+
+                <a href="#catalog" class="category-tile"
+                    data-category="Мужская">
+                    <img
+                        src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=900&q=85"
+                        alt="Мужская одежда">
+                    <span>02 / МУЖСКОЕ</span>
+                    <b>Для него ↗</b>
+                </a>
+
+                <a href="#catalog" class="category-tile"
+                    data-category="Аксессуары">
+                    <img
+                        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85"
+                        alt="Аксессуары">
+                    <span>03 / ДЕТАЛИ</span>
+                    <b>Аксессуары ↗</b>
+                </a>
+            </div>
+        </section>
+
+        <!-- Каталог товаров -->
+        <section class="catalog section-wrap" id="catalog">
+            <div class="section-top catalog-heading">
+                <div>
+                    <p class="eyebrow">ОБНОВИ СВОЙ ГАРДЕРОБ</p>
+                    <h2>Выбрано <em>для тебя</em></h2>
+                </div>
+
+                <span class="result-count" id="resultCount">
+                    12 ПОЗИЦИЙ
+                </span>
+            </div>
+
+            <!-- Фильтры -->
+            <div class="catalog-controls">
+                <div class="filters" id="filters">
+                    <button type="button" class="filter active"
+                        data-filter="all">ВСЁ</button>
+
+                    <button type="button" class="filter"
+                        data-filter="Женская">ЖЕНСКОЕ</button>
+
+                    <button type="button" class="filter"
+                        data-filter="Мужская">МУЖСКОЕ</button>
+
+                    <button type="button" class="filter"
+                        data-filter="Аксессуары">АКСЕССУАРЫ</button>
+                </div>
+
+                <select id="sortSelect">
+                    <option value="featured">СНАЧАЛА ПОПУЛЯРНОЕ</option>
+                    <option value="low">СНАЧАЛА ДЕШЕВЛЕ</option>
+                    <option value="high">СНАЧАЛА ДОРОЖЕ</option>
+                </select>
+            </div>
+
+            <div class="product-grid" id="productGrid"></div>
+
+            <p class="no-results" id="noResults" hidden>
+                Ничего не найдено. Попробуй другой запрос.
+            </p>
+        </section>
+
+        <!-- История бренда -->
+        <section class="editorial" id="story">
+            <div class="editorial-image">
+                <img
+                    src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85"
+                    alt="Fashion editorial">
+            </div>
+
+            <div class="editorial-copy">
+                <p class="eyebrow">МЕНЬШЕ, НО ЛУЧШЕ</p>
+
+                <h2>
+                    Твой гардероб.
+                    <br>
+                    <em>Твои правила.</em>
+                </h2>
+
+                <p>
+                    Мы верим, что стиль не должен быть сложным.
+                    Создавай собственные сочетания, выбирай
+                    вещи надолго и носи их по-своему.
+                </p>
+
+                <a href="#catalog" class="dark-link">
+                    ОТКРЫТЬ КАТАЛОГ ↗
+                </a>
+            </div>
+        </section>
+
+        <!-- Преимущества -->
+        <section class="perks section-wrap">
+            <div>
+                <span>01</span>
+                <b>Продуманный выбор</b>
+                <p>Универсальные вещи и актуальные силуэты.</p>
+            </div>
+
+            <div>
+                <span>02</span>
+                <b>Доставка по Казахстану</b>
+                <p>Удобная доставка и понятные условия.</p>
+            </div>
+
+            <div>
+                <span>03</span>
+                <b>Забота о деталях</b>
+                <p>Помощь с выбором и поддержка покупателей.</p>
+            </div>
+        </section>
+
+        <!-- Подписка -->
+        <section class="newsletter">
+            <p class="eyebrow light">БУДЬ В КУРСЕ</p>
+
+            <h2>
+                Ничего лишнего.
+                <br>
+                <em>Только хорошее.</em>
+            </h2>
+
+            <p>
+                Новости коллекций, идеи образов
+                и специальные предложения.
+            </p>
+
+            <form id="newsletterForm">
+                <input type="email" placeholder="Твой e-mail" required>
+                <button type="submit">ПОДПИСАТЬСЯ ↗</button>
+            </form>
+
+            <small id="newsletterMessage"></small>
+        </section>
+
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <a href="#" class="logo">FOR<span>MA</span><i>.</i></a>
+
+        <p>ОДЕЖДА С ХАРАКТЕРОМ. СТИЛЬ БЕЗ ПРАВИЛ.</p>
+
+        <div>
+            <a href="#catalog">КАТАЛОГ</a>
+            <a href="#story">О БРЕНДЕ</a>
+            <a href="mailto:hello@forma.example">КОНТАКТЫ</a>
+        </div>
+
+        <small>© 2026 FORMA. ДЕМОНСТРАЦИОННЫЙ МАГАЗИН.</small>
+    </footer>
+
+    <!-- Корзина -->
+    <div class="overlay" id="cartOverlay">
+        <aside class="cart-drawer">
+            <div class="drawer-head">
+                <div>
+                    <p class="eyebrow">ТВОЙ ВЫБОР</p>
+                    <h2>
+                        Сумка
+                        <span id="drawerCount">(0)</span>
+                    </h2>
+                </div>
+
+                <button type="button" class="close-btn"
+                    id="closeCart" aria-label="Закрыть корзину">
+                    ×
+                </button>
+            </div>
+
+            <div class="cart-items" id="cartItems"></div>
+
+            <div class="cart-bottom">
+                <div class="shipping-note" id="shippingNote">
+                    Бесплатная доставка от 30 000 ₸
+                </div>
+
+                <div class="total-row">
+                    <span>ИТОГО</span>
+                    <b id="cartTotal">0 ₸</b>
+                </div>
+
+                <button class="checkout-btn" id="checkout">
+                    ПЕРЕЙТИ К ОФОРМЛЕНИЮ ↗
+                </button>
+
+                <small>
+                    Демонстрационный проект. Оплата не подключена.
+                </small>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Уведомления -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
